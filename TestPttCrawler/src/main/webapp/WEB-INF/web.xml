@@ -1,0 +1,28 @@
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+  <display-name>TestPttCrawler</display-name>
+
+  <servlet>
+    <servlet-name>PttGossipingTestCrawler</servlet-name>
+    <servlet-class>com.test.controller.PttGossipingTestCrawler</servlet-class>
+  </servlet>
+  <servlet>
+  	<description>
+  	</description>
+  	<display-name>ForwardToResultServlet</display-name>
+  	<servlet-name>ForwardToResultServlet</servlet-name>
+  	<servlet-class>com.test.controller.ForwardToResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PttGossipingTestCrawler</servlet-name>
+    <url-pattern>/PttGossipingTestCrawler.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ForwardToResultServlet</servlet-name>
+  	<url-pattern>/ForwardToResultServlet.do</url-pattern>
+  </servlet-mapping>  
+</web-app>
